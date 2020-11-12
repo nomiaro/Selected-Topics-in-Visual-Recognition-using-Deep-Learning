@@ -7,7 +7,7 @@
 ## 重現方法
 跟著以下步驟可以重現同樣成果：
 1. [Installation](#installation)
-2. [Dataset Preparation](#Dataset Preparation)
+2. [Dataset Preparation](#Dataset_Preparation)
 3. [Train models](#Train models)
 
 ## Installation
