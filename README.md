@@ -3,6 +3,9 @@
 
 ## 環境
 - Google colab
+or
+- jupyter notebook
+- pytorch with cuda 10.1
 
 ## 重現方法
 跟著以下步驟可以重現同樣成果：
