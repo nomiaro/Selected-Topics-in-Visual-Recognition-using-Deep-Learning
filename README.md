@@ -33,5 +33,5 @@ HW1
 1. 按照上面結構擺好後，上傳到google drive
 2. 點擊HW1.ipynb，透過google colab開啟它
 3. 點開左上角編輯 => 筆記本設定 => 選擇gpu => 儲存
-4. 修改Parameters中的dir_path為你HW1.ipynb的路徑，如果不知道可執行上方的!pwd取得路徑
+4. 修改Parameters中的dir_path為你HW1.ipynb的路徑
 5. 點開上方執行階段 => 全部執行，就可以得到預測結果的result.csv
