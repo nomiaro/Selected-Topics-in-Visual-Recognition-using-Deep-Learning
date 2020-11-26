@@ -1,5 +1,5 @@
 # Selected-Topics-in-Visual-Recognition-using-Deep-Learning-HW2
-基於深度學習之視覺辨識專論HW1的code，詳細情形可參考[HW2](https://www.kaggle.com/c/cs-t0828-2020-hw1/overview)
+基於深度學習之視覺辨識專論HW1的code，詳細情形可參考[HW2](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW2/HW2.pdf)
 
 ## 環境
 - Google colab
