@@ -15,10 +15,11 @@
 
 ## 準備資料
 前往[google連結](https://drive.google.com/drive/folders/1P5rlaMDkdeJ8crg3TSnLs_IWgryoyv_N?usp=sharing)
-將test下載下來解壓縮擺成下面的結構
+將test.zip和checkpoint.pth下載下來，將test.zip解壓縮後擺成下面的結構
 ```
 HW2
   +- HW2.ipynb
+  +- checkpoint.pth
   +- test
   |  +- ...png
 ```
