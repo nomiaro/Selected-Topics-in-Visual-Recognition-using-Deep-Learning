@@ -14,7 +14,7 @@
 將HW2.ipynb下載下來。
 
 ## 準備資料
-前往[google連結](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
+前往[google連結](https://drive.google.com/drive/folders/1P5rlaMDkdeJ8crg3TSnLs_IWgryoyv_N?usp=sharing)
 將test下載下來解壓縮擺成下面的結構
 ```
 HW2
