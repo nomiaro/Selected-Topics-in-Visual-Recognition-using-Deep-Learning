@@ -14,8 +14,8 @@
 5. [產生結果](#產生結果)
 
 # 準備資料
-1. 將[HW3.zip](https://drive.google.com/file/d/1mY5E10j_N8yCnZ1XhMxnocH6uZXKpxWx/view?usp=sharing)下載下來並解壓縮<br>
-2. 將HW3中train_images.zip和test_images.zip解壓縮
+1. 將[HW3.zip](https://drive.google.com/file/d/1D_B7Ns9Blh5wSahj-3BN07DryyuvjObJ/view?usp=sharing)下載下來並解壓縮<br>
+2. 將HW3中的test_images.zip解壓縮
 
 # 環境下載
  - 下載yolact:
@@ -32,7 +32,7 @@
 
 # 下載網路參數
 1. 將[config.py](https://drive.google.com/file/d/1DmcOOyJng8uiGr484F-dhCbAsZMnPxVo/view?usp=sharing)下載下來<br>
-2. 修改config中的路徑
+2. 修改config.py中的路徑
 ```
 # config.py:187
 my_custom_test_dataset = dataset_base.copy({
@@ -48,7 +48,7 @@ my_custom_test_dataset = dataset_base.copy({
 3. 取代yolact/data/ 中的 config.py
 
 # 下載pretrained_weights
-1. 將[weight](https://drive.google.com/file/d/1x1BmaA_jgRfbUtoTRcP8CXHoYWk7kJ3_/view?usp=sharing)下載下來<br>
+1. 將[weight.pth](https://drive.google.com/file/d/1x1BmaA_jgRfbUtoTRcP8CXHoYWk7kJ3_/view?usp=sharing)下載下來<br>
 2. 在yolact/ 創建資料夾weights/，接著將下載的weight放入這個資料夾
 
 # 修改模型錯誤
@@ -88,10 +88,7 @@ except RuntimeError as e:
 1. 按照上面完成後結構:
 ```
 HW3
-  +- pascal_train.json
   +- test.json
-  +- train_images
-  |  +- ...jpg
   +- test_images
   |  +- ...jpg
   +- yolact
@@ -99,7 +96,7 @@ HW3
   |  |  +- config.py
   |  |  +- ...
   |  +- weights
-  |  |  +- ...pth
+  |  |  +- weight.pth
   |  +- ...
 ```
 2. 進入yolact資料夾執行以下指令，產生在yolact/result/的mask_detections.json就是這次要的結果
