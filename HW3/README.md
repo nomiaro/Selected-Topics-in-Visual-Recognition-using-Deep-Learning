@@ -18,14 +18,13 @@
 2. 將HW3中train_images.zip和test_images.zip解壓縮
 
 # 環境下載
- - 下載yolact並進入資料夾:
-   ```Shell
+ - 下載yolact:
+   ```
    cd HW3
    git clone https://github.com/dbolya/yolact.git
-   cd yolact
    ```
  - 下載其他需要的package:
-   ```Shell
+   ```
    # Cython needs to be installed before pycocotools
    pip install cython
    pip install opencv-python pillow pycocotools matplotlib 
