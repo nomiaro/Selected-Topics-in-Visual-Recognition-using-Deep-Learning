@@ -1,26 +1,26 @@
 # Selected-Topics-in-Visual-Recognition-using-Deep-Learning-HW1
-基於深度學習之視覺辨識專論HW1的code，詳細情形可參考[HW3](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW3/HW3.pdf)
+基於深度學習之視覺辨識專論HW3的code，詳細情形可參考[HW3](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW3/HW3.pdf)
 
 # 環境
  - linux
- - CUDA 10.1
- - pytorch(torch==1.4.0 torchvision==0.5.0)
+ - CUDA 10.0
 
 # 重現方法
 跟著以下步驟可以重現同樣成果：
-1. [環境下載](#環境下載)
-2. [下載網路參數](#下載網路參數)
-3. [準備資料](#準備資料)
-4. [訓練model](#訓練model)
-5. [提示](#提示)
+1. [準備資料](#準備資料)
+2. [環境下載](#環境下載)
+3. [下載網路參數](#下載網路參數)
+4. [下載pretrained weights](#下載pretrained weights)
+5. [產生結果](#產生結果)
+
+# 準備資料
+前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
+HW3.zip下載下來並解壓縮
 
 # 環境下載
- - 下載指定版本的pytorch避免錯誤:
-   ```Shell
-   pip install torch==1.4.0 torchvision==0.5.0
-   ```
  - 下載yolact並進入資料夾:
    ```Shell
+   cd HW3
    git clone https://github.com/dbolya/yolact.git
    cd yolact
    ```
@@ -30,38 +30,66 @@
    pip install cython
    pip install opencv-python pillow pycocotools matplotlib 
    ```
- - 建立yolact++所需環境:
-   ```Shell
-   cd external/DCNv2
-   python setup.py build develop
-   ```
 
 # 下載網路參數
-將config.py下載下來。
+將config.py下載下來，並取代yolact/data/ 中的 config.py
 
-# 準備資料
-前往[Kaggle](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
-csv => 將training_labels.csv下載下來
-image => 將training_data和testing_data下載下來解壓縮
-完成後擺放成以下結構:
+# 下載pretrained weights
+前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
+將weights下載下來，在yolact/ 創建資料夾weights/，接著將下載的weight放入這個資料夾
+
+# 修改模型錯誤
+```
+# yolact/eval.py:975
+print('\rProcessing Images  %s %6d / %6d (%5.2f%%)    %5.2f fps        '
+    % (repr(progress_bar), it+1, dataset_size, progress, fps), end='')
+=>
+'''
+print('\rProcessing Images  %s %6d / %6d (%5.2f%%)    %5.2f fps        '
+    % (repr(progress_bar), it+1, dataset_size, progress, fps), end='')
+'''
+```
+```
+# yolact/data/coco.py:172
+if target.shape[0] == 0:
+    print('Warning: Augmentation output an example with no ground truth. Resampling...')
+    return self.pull_item(random.randint(0, len(self.ids)-1))
+=>
+'''
+if target.shape[0] == 0:
+    print('Warning: Augmentation output an example with no ground truth. Resampling...')
+    return self.pull_item(random.randint(0, len(self.ids)-1))
+'''
+```
+```
+# yolact.py:490 
+self.load_state_dict(state_dict)
+=>
+try:
+    self.load_state_dict(state_dict)
+except RuntimeError as e:
+    print('Ignoring "' + str(e) + '"')
+```
+
+# 產生結果
+1. 按照上面完成後結構:
 ```
 HW3
-  +- HW1.ipynb
-  +- data
-  |  +- training_data
-  |  |  +- ...jpg
-  |  +- testing_data
-  |  |  +- ...jpg
-  |  +- training_labels.csv
+  +- pascal_train.json
+  +- test.json
+  +- train_images
+  |  +- ...jpg
+  +- test_images
+  |  +- ...jpg
+  +- yolact
+  |  +- data
+  |  |  +- config.py
+  |  |  +- ...
+  |  +- weights
+  |  |  +- ...pth
+  |  +- ...
 ```
-
-### 訓練model
-1. 按照上面結構擺好後，上傳到google drive
-2. 點擊HW1.ipynb，透過google colab開啟它
-3. 點開左上角編輯 => 筆記本設定 => 選擇gpu => 儲存
-4. 修改Parameters中的dir_path為你HW1.ipynb的路徑
-5. 點開上方執行階段 => 全部執行，就可以得到預測結果的result.csv
-
-## 提示
-1. 如果在執行train的時候，遇到Error:Input/output error，不要驚慌，過幾分鐘再執行就會正確了，這是還沒完全連接google drive造成的錯誤
-2. 如果是連接google drive的第一次訓練，執行train的第一個epoch會特別久(大約1小時)，之後的epoch就會正常了(大約6分鐘)
+2. 進入yolact資料夾執行以下指令，產生在yolact/result/的mask_detections.json就是這次要的結果
+```
+python3 eval.py --trained_model=weights/weight.pth --config= --output_coco_json --dataset=
+```
