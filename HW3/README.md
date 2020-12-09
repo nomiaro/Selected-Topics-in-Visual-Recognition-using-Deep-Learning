@@ -14,8 +14,8 @@
 5. [產生結果](#產生結果)
 
 # 準備資料
-前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
-HW3.zip下載下來並解壓縮
+前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)<br>
+將HW3.zip下載下來並解壓縮
 
 # 環境下載
  - 下載yolact並進入資料夾:
@@ -35,7 +35,7 @@ HW3.zip下載下來並解壓縮
 將config.py下載下來，並取代yolact/data/ 中的 config.py
 
 # 下載pretrained_weights
-前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
+前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)<br>
 將weights下載下來，在yolact/ 創建資料夾weights/，接著將下載的weight放入這個資料夾
 
 # 修改模型錯誤
