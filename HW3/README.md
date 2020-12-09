@@ -15,7 +15,7 @@
 
 # 準備資料
 1. 將[HW3.zip](https://drive.google.com/file/d/1mY5E10j_N8yCnZ1XhMxnocH6uZXKpxWx/view?usp=sharing)下載下來並解壓縮<br>
-2. 將HW3中train_images.zip和t_images.zip解壓縮
+2. 將HW3中train_images.zip和test_images.zip解壓縮
 
 # 環境下載
  - 下載yolact並進入資料夾:
