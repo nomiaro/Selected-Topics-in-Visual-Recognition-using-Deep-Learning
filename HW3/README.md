@@ -1,26 +1,51 @@
 # Selected-Topics-in-Visual-Recognition-using-Deep-Learning-HW1
-基於深度學習之視覺辨識專論HW1的code，詳細情形可參考[HW3](https://www.kaggle.com/c/cs-t0828-2020-hw1/overview)
+基於深度學習之視覺辨識專論HW1的code，詳細情形可參考[HW3](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW3/HW3.pdf)
 
-## 環境
-- Google colab
+# 環境
+ - linux
+ - CUDA 10.1
+ - pytorch(torch==1.4.0 torchvision==0.5.0)
 
-## 重現方法
+# 重現方法
 跟著以下步驟可以重現同樣成果：
-1. [下載作業檔案](#下載作業檔案)
-2. [準備資料](#準備資料)
-3. [訓練model](#訓練model)
-4. [提示](#提示)
+1. [環境下載](#環境下載)
+2. [下載網路參數](#下載網路參數)
+3. [準備資料](#準備資料)
+4. [訓練model](#訓練model)
+5. [提示](#提示)
 
-## 下載作業檔案
-將HW1.ipynb下載下來。
+# 環境下載
+ - 下載指定版本的pytorch避免錯誤:
+   ```Shell
+   pip install torch==1.4.0 torchvision==0.5.0
+   ```
+ - 下載yolact並進入資料夾:
+   ```Shell
+   git clone https://github.com/dbolya/yolact.git
+   cd yolact
+   ```
+ - 下載其他需要的package:
+   ```Shell
+   # Cython needs to be installed before pycocotools
+   pip install cython
+   pip install opencv-python pillow pycocotools matplotlib 
+   ```
+ - 建立yolact++所需環境:
+   ```Shell
+   cd external/DCNv2
+   python setup.py build develop
+   ```
 
-## 準備資料
+# 下載網路參數
+將config.py下載下來。
+
+# 準備資料
 前往[Kaggle](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
 csv => 將training_labels.csv下載下來
 image => 將training_data和testing_data下載下來解壓縮
 完成後擺放成以下結構:
 ```
-HW1
+HW3
   +- HW1.ipynb
   +- data
   |  +- training_data
