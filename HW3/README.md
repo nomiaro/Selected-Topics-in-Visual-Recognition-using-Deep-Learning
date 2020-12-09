@@ -32,11 +32,12 @@
    ```
 
 # 下載網路參數
-將config.py下載下來，並取代yolact/data/ 中的 config.py
+1. 將[config.py]()下載下來<br>
+2. 取代yolact/data/ 中的 config.py
 
 # 下載pretrained_weights
-前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)<br>
-將weights下載下來，在yolact/ 創建資料夾weights/，接著將下載的weight放入這個資料夾
+1. 將[weight](https://drive.google.com/file/d/1x1BmaA_jgRfbUtoTRcP8CXHoYWk7kJ3_/view?usp=sharing)下載下來<br>
+2. 在yolact/ 創建資料夾weights/，接著將下載的weight放入這個資料夾
 
 # 修改模型錯誤
 ```
