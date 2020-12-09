@@ -10,7 +10,7 @@
 1. [準備資料](#準備資料)
 2. [環境下載](#環境下載)
 3. [下載網路參數](#下載網路參數)
-4. [下載pretrained_weights](#下載pretrained weights)
+4. [下載pretrained weights](#下載pretrained_weights)
 5. [產生結果](#產生結果)
 
 # 準備資料
