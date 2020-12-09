@@ -31,8 +31,21 @@
    ```
 
 # 下載網路參數
-1. 將[config.py]()下載下來<br>
-2. 取代yolact/data/ 中的 config.py
+1. 將[config.py](https://drive.google.com/file/d/1DmcOOyJng8uiGr484F-dhCbAsZMnPxVo/view?usp=sharing)下載下來<br>
+2. 修改config中的路徑
+```
+# config.py:187
+my_custom_test_dataset = dataset_base.copy({
+    'name': 'my custom test dataset',
+
+    'valid_images': 'path_to_test_images',
+    'valid_info':   'path_to_test.json',
+
+    'has_gt': False,
+    'class_names': PASCAL_CLASSES
+})
+```
+3. 取代yolact/data/ 中的 config.py
 
 # 下載pretrained_weights
 1. 將[weight](https://drive.google.com/file/d/1x1BmaA_jgRfbUtoTRcP8CXHoYWk7kJ3_/view?usp=sharing)下載下來<br>
