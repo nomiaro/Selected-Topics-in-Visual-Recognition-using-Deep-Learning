@@ -14,8 +14,8 @@
 5. [產生結果](#產生結果)
 
 # 準備資料
-前往[Google drive](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)<br>
-將HW3.zip下載下來並解壓縮
+1. 將[HW3.zip](https://drive.google.com/file/d/1mY5E10j_N8yCnZ1XhMxnocH6uZXKpxWx/view?usp=sharing)下載下來並解壓縮<br>
+2. 將HW3中train_images.zip和t_images解壓縮
 
 # 環境下載
  - 下載yolact並進入資料夾:
