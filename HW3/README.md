@@ -31,7 +31,7 @@
    ```
 
 # 下載網路參數
-1. 將[config.py](https://drive.google.com/file/d/1DmcOOyJng8uiGr484F-dhCbAsZMnPxVo/view?usp=sharing)下載下來<br>
+1. 將[config.py](https://drive.google.com/file/d/1cTDXjvRogcTQfkmgwVcsTLidsIV_0sTW/view?usp=sharing)下載下來<br>
 2. 修改config.py中的路徑
 ```
 # config.py:187
@@ -101,5 +101,5 @@ HW3
 ```
 2. 進入yolact資料夾執行以下指令，產生在yolact/result/的mask_detections.json就是這次要的結果
 ```
-python3 eval.py --trained_model=weights/weight.pth --config= --output_coco_json --dataset=
+python3 eval.py --trained_model=weights/weight.pth --config=my_custom_test_config --output_coco_json --dataset=my_custom_test_dataset
 ```
