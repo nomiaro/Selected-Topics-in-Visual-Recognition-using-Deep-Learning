@@ -1,4 +1,4 @@
-# Selected-Topics-in-Visual-Recognition-using-Deep-Learning-HW1
+# Selected-Topics-in-Visual-Recognition-using-Deep-Learning-HW3
  - 基於深度學習之視覺辨識專論HW3的code，使用[yolact](https://github.com/dbolya/yolact)實作
  - 任務要求可參考[HW3](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW3/HW3.pdf)
 
