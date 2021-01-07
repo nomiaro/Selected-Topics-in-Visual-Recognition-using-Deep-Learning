@@ -25,11 +25,11 @@
    ```
 
 # 下載修改的code
-1. 將我的github的carn資料夾下載下來<br>
+1. 將我的github的[carn](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/HW4/carn)資料夾下載下來<br>
 2. 取代CARN-pytorch/carn/
 
 # 下載pretrained_weights
-1. 將[weight.pth](https://drive.google.com/file/d/1x1BmaA_jgRfbUtoTRcP8CXHoYWk7kJ3_/view?usp=sharing)下載下來<br>
+1. 將[weight.pth](https://github.com/nomiaro/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW4/carn_1000.pth)下載下來<br>
 2. 將下載的weight放在CARN-pytorch/checkpoint/中
 
 # 產生結果
