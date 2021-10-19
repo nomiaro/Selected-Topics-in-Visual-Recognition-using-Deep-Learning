@@ -15,9 +15,9 @@
 將HW1.ipynb下載下來。
 
 ## 準備資料
-前往[Kaggle](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)
-csv => 將training_labels.csv下載下來
-image => 將training_data和testing_data下載下來解壓縮
+前往[Kaggle](https://www.kaggle.com/c/cs-t0828-2020-hw1/data)  
+csv => 將training_labels.csv下載下來  
+image => 將training_data和testing_data下載下來解壓縮  
 完成後擺放成以下結構:
 ```
 HW1
